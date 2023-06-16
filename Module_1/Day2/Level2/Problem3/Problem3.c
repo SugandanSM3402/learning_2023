@@ -17,19 +17,20 @@ void printNames(char *names[], int size) {
     printf("\n");
     printf("Sorted Names:\n");
     for (int i = 0; i < size; i++) {
-        printf("%s", names[i]);
+        printf("\"%s \"", names[i]);
     }
+    printf("\n");
 }
 
 int main() {
-    char *names[] = {
+    char* names[] = {
         "Santosh", "Amol", "Santosh Jain", "Kishore", "Rahul", "Amolkumar", "Hemant"
     };
     int size = sizeof(names) / sizeof(names[0]);
 
     printf("Original Names:\n");
     for (int i = 0; i < size; i++) {
-        printf("%s", names[i]);
+        printf("\"%s\"", names[i]);
     }
 
     qsort(names, size, sizeof(char *), compareNames);
